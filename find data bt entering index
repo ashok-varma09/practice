@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include<string.h>
+
+struct info{
+    char company_name[50];
+    char colour[50];
+    char model[50];
+    int price;
+};
+
+
+int main()
+{
+    int n,a;
+    printf("Enter an array for data : ");
+    scanf("%d",&n);
+    a=n;
+  struct info mobile[n];
+
+  // declaring the prices of cars 
+  
+    mobile[0].price=10000;
+    mobile[1].price=50000;
+    mobile[2].price=45000;
+    
+   // declaring the companty name 
+   
+  strcpy(mobile[0].company_name,"REDMI");
+  strcpy(mobile[1].company_name,"ONELPUS");
+  strcpy(mobile[2].company_name,"SAMSUNG");
+  
+  // declaring colour
+  
+   strcpy(mobile[0].colour,"RED");
+   strcpy(mobile[1].colour,"BLACK");
+   strcpy(mobile[2].colour,"WHITE"); 
+
+  //DECLARING model
+  
+  strcpy(mobile[0].model,"ULTRA pro max");
+  strcpy(mobile[1].model,"NORD 2");
+  strcpy(mobile[2].model,"S23 pro");
+
+  for (int i=0;i<3;i++)
+  {
+      
+    
+     if (i==n-1){
+     printf("Mobile details\n--------\nCompany name %s\ncolour %s\nModel %s\nPrice %d",mobile[i].company_name,mobile[i].colour,mobile[i].model,mobile[i].price); 
+     }
+  }
+   
+
+    return 0;
+}
