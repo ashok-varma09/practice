@@ -1,0 +1,27 @@
+// 10 9 8 7 6
+//    9 8 7 6
+//      8 7 6
+//        7 6 
+//          6
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    for (int i=1;i<=5;i++)
+    {
+        for (int j=1;j<i;j++)
+        {
+          printf(" ");  
+        }
+        for (int k=11-i;k>=6;k--)
+        {
+            printf("%d",k);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
